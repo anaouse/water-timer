@@ -1,4 +1,8 @@
 **/*.pdb
 **/*.exe
-log.txt
 **/*.obj
+
+*.zip
+/release/
+log.txt
+water_timer_records.json
