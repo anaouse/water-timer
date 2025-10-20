@@ -1,5 +1,7 @@
 # water-timer
 
+[English README(Translated by AI)](./README-en.md)
+
 我需要一个可视化的计时器来看看我每天都花了多少时间在代码上,所以就写了这个程序,SDL3用于画面交互,ImGui用于展示数据
 
 ## 如何使用
