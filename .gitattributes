@@ -1,2 +1,2 @@
-imgui/ linguist-vendored
-SDL3/ linguist-vendored
+imgui/** linguist-vendored
+SDL3/** linguist-vendored
