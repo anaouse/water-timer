@@ -165,9 +165,11 @@ int runApp() {
 							my >= buttons[i].rect.y && my <= buttons[i].rect.y + buttons[i].rect.h) {
 							if(i == 0) {
 								windowStatus = Status::Running;
-								startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
-										std::chrono::system_clock::now().time_since_epoch()).count();
-								std::cout << "Start time recorded: " << startTimestamp << std::endl;
+								if(elapsedMinutes == 0) {
+									startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
+											std::chrono::system_clock::now().time_since_epoch()).count();
+									std::cout << "Start time recorded: " << startTimestamp << std::endl;
+								}
 							}
 							if(i == 1) windowStatus = Status::Paused;
 							if(i == 2) {
