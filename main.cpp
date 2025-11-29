@@ -7,10 +7,12 @@
 #include <thread>
 #include "json.hpp"
 #include "SDL3/SDL.h"
+
 // 数据保存的
 using json = nlohmann::json;
 const char* savePath = "./water_timer_records.json";
-void saveRecord(const char* path, int64_t timestamp, int elapsedMinutes) {
+void saveRecord(const char* path, int64_t timestamp, int elapsedMinutes)
+{
     json record = {
         {"timestamp", timestamp},
         {"elapsedMinutes", elapsedMinutes}
@@ -45,11 +47,12 @@ struct Button {
 	bool visible;
 };
 
-int runApp() {
+int runApp()
+{
 		// 初始化整个window
 	std::cout << "start debug" << std::endl;
 	SDL_Init(SDL_INIT_VIDEO);
-	int windowW = 200;
+	int windowW = 100;
 	int windowH = 400;
 	SDL_Window* window = SDL_CreateWindow(
 		"water_timer",
@@ -62,8 +65,8 @@ int runApp() {
 		return 1;
 	}
 	std::cout <<"window W,H:" << windowW << " " << windowH << std::endl;
+
 	// 去掉APPWINDOW,加上TOOLWINDOW,修改为悬浮窗样式
-#if defined(SDL_PLATFORM_WIN32)
     HWND hwnd = (HWND)SDL_GetPointerProperty(SDL_GetWindowProperties(window), SDL_PROP_WINDOW_WIN32_HWND_POINTER, NULL);
 	
 	LONG exStyle = GetWindowLong(hwnd, GWL_EXSTYLE);
@@ -72,7 +75,7 @@ int runApp() {
 	SetWindowLong(hwnd, GWL_EXSTYLE, exStyle);
 
 	SetWindowPos(hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
-#endif
+
 	// 初始化renderer
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, NULL);
 	SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);

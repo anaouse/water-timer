@@ -1,3 +1,7 @@
+# update
+
+This project is ugly. Please Check my another project "ScreenFocus".
+
 # water-timer
 
 I needed a visualized timer to track how much time I spend coding each day, so I wrote this program. **SDL3** is used for screen interaction, and **ImGui** is used for data display.

@@ -19,7 +19,7 @@ LIBRARIES = ["user32.lib", "gdi32.lib", "SDL3.lib"]
 
 # 编译链接参数
 CFLAGS = ["/MDd", "/Od", "/Zi",] + INCLUDE
-LFLAGS = ["/link", "/SUBSYSTEM:CONSOLE"] + LIBPATH + LIBRARIES
+LFLAGS = ["/link", "/SUBSYSTEM:CONSOLE", "/ENTRY:mainCRTStartup"] + LIBPATH + LIBRARIES
 
 # 生成的exe文件
 MAIN_OUT = "water_timer.exe"

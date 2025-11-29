@@ -1,3 +1,7 @@
+# update
+
+这个项目不太优雅，我的时间记录换成了我的另外一个项目——ScreenFocus。
+
 # water-timer
 
 [English README(Translated by AI)](./README-en.md)
